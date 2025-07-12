@@ -130,21 +130,19 @@ TeamCard = Card(
         DivHStacked(*(UkIconLink(icon, height=16) for icon in ("mail", "linkedin", "github")))),
     cls=CardT.hover)
 
+def ex_navbar2():    
+    return NavBar(
+        A(Input(placeholder='search')), 
+        A(UkIcon("rocket")), 
+        A('Page1',href='/rt1'), 
+        A("Page2", href='/rt3'),
+        brand=DivLAligned(UkIcon('rocket',height=30,width=30)))
+
+
 @rt
 def index():
     title = "Cards Example"
-    navbar = NavBar(
-        DivFullySpaced(
-            Div("My Logo" ), # Replace with actual logo later if needed
-            DivHStacked(
-                A("Blog", href="#" , cls=TextT.medium), # Replace # with actual routes later
-                A("About", href="#" , cls=TextT.medium),
-                A("Price", href="#" , cls=TextT.medium),
-                cls='space-x-4' # Add some spacing between links
-            ),
-            Div(A("Login", href="#"), cls='space-y-4') # Replace # with actual route later
-        ),
-    )
+    navbar = ex_navbar2()
     container_content = Container(Grid(
             *map(Div,(
                       Div(PaymentMethod,CreateAccount,TeamCard, cls='space-y-4'),
