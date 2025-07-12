@@ -1,0 +1,16 @@
+[project]
+name = "chess-data-for-streamers"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "llm-ctx>=0.0.1",
+    "monsterui>=1.0.21",
+    "numpy>=2.3.1",
+    "pandas>=2.3.1",
+    "pipreqs>=0.5.0",
+    "plotly>=6.2.0",
+    "python-fasthtml>=0.12.21",
+    "ruff>=0.12.2",
+]
